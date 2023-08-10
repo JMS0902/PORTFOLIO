@@ -40,7 +40,7 @@
 a{color: #333; text-decoration: none;}
 a:hover{color: #666;}
 
-#header{position: fixed;  z-index: 50; width: 100%; height: 90px; left: 0; top: 0; background: linear-gradient(180deg, rgba(48, 48, 48, 0.70) 0%, rgba(48, 48, 48, 0.14) 100%);backdrop-filter: blur(5px); box-sizing: border-box;}
+#header{position: fixed;  z-index: 120; width: 100%; height: 90px; left: 0; top: 0; background: linear-gradient(180deg, rgba(48, 48, 48, 0.70) 0%, rgba(48, 48, 48, 0.14) 100%);backdrop-filter: blur(5px); box-sizing: border-box;}
 .header_wrap{position: relative; width: 90%; height: 90px; margin: 0 auto;}
 
 #container{}
@@ -76,7 +76,7 @@ a:hover{color: #666;}
 .side_roll > ul > li > a:hover{background: #fff;}
 
 /* content1 - main */
-#main > h1{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'PartialSansKR-Regular'; font-size: 110px; letter-spacing: 7.2px; background: linear-gradient(to bottom right, #FFF 0%, rgba(255, 255, 255, 0.50) 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, #FFF 0%, rgba(255, 255, 255, 0.50) 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, #FFF 0%, rgba(255, 255, 255, 0.50) 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, #FFF 0%, rgba(255, 255, 255, 0.50) 50%) top right / 50% 50% no-repeat;
+#main > h1{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'PartialSansKR-Regular'; font-size: 110px; letter-spacing: 7.2px; background: radial-gradient(74.40% 74.40% at 47.97% 50.00%, #FFF 0%, rgba(255, 255, 255, 0.50) 100%);
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;}
@@ -85,7 +85,11 @@ background-clip: text;
 #main > ul > li {width: 100%; top: 0; font-family: 'Montserrat', sans-serif; color: #fff; letter-spacing: 0.5px; font-weight: 600; font-size: 20px; height: 50%; line-height: 100px;}
 #main > ul > li:first-child:after {content: ""; display: block; position: absolute; left: 50%; top: 50%; width: 22px; height: 27px; transform: translate(-50%, -50%);  background: url(../images/main_line.png) no-repeat 0 0; background-size: 80%;}
 
-#main > p{position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%);}
+#main > p{position: absolute; bottom: 60px; left: 50%; transform: translateX(-50%); animation: scroll 1.5s infinite; transition: all 1s linear 0s;}
+@keyframes scroll {
+    0%{bottom: 60px; opacity: 1;}
+    100%{bottom: 40px; opacity: 0;}
+}
 #main > p > img{height: 60px;}
 
 
@@ -262,7 +266,7 @@ ul.career > li:nth-child(3) > dl > dd:nth-of-type(even){ display: inline-block; 
 ul.info_02 {display: flex; flex-flow: column nowrap; text-align: left; width: 100%; font-size: 20px;}
 ul.info_02 > li:first-child > ul > li{display: inline-block;}
 ul.info_02 > li:first-child > ul > li:first-child {width: 45px;}
-ul.info_02 > li:first-child > ul > li:last-child {margin-bottom: 10px; font-weight: 400; font-family: 'Montserrat', sans-serif;}
+ul.info_02 > li:first-child > ul > li:last-child {margin-bottom: 20px; font-weight: 400; font-family: 'Montserrat', sans-serif;}
 
 ul.info_02 > li:last-child > ul > li{display: inline-block;}
 ul.info_02 > li:last-child> ul > li:first-child {width: 45px;}

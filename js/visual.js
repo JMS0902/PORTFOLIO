@@ -19,24 +19,22 @@ console.log(bnnW);
 
 
 // 슬라이드
-window.addEventListener('resize',()=>{
 
-  if(bnnW < 787){
-    // 모바일
-    conSlide(500);
-  }else{
-    //pc
-    conSlide(320);
-  }
+// if(bnnW < 787){
+//   // 모바일
+//   conSlide(500);
+// }else{
+//   //pc
+//   conSlide(320);
+// }
 
-function conSlide(conW){
   // 다음버튼클릭
 btnNext.addEventListener("click",(e)=>{
   e.preventDefault();
   bnnNum++;
   if(bnnNum > lastNum)bnnNum=0;
 
-  bnnFrame.style.left = `${conW*-bnnNum}px`;
+  bnnFrame.style.left = `${320*-bnnNum}px`;
 });
 
 btnPrev.addEventListener("click",(e)=>{
@@ -44,54 +42,35 @@ btnPrev.addEventListener("click",(e)=>{
   bnnNum--;
   if(bnnNum < 0){bnnNum=lastNum};
 
-  bnnFrame.style.left = `${conW*-bnnNum}px`;
+  bnnFrame.style.left = `${320*-bnnNum}px`;
 }); 
+
+
+// 팝업창
+const popup = document.querySelector('.popup');
+const sections = document.querySelectorAll('.popup>section');
+const closeBtn = document.querySelector(".popBtn_close");
+
+for(let i=0; i<bnnSection.length; i++){
+  bnnSection[i].addEventListener('click', (e) => {
+        e.preventDefault();
+        popup.classList.add('on');
+        sections.forEach(item => {
+            item.classList.remove('on');
+        });
+        sections[i].classList.add('on');
+        closeBtn.classList.add('on');
+    })
 }
 
+closeBtn.addEventListener("click", e=>{
+  e.preventDefault();
+  popup.classList.remove("on");
+  sections.forEach(item=>{
+    item.classList.remove("on");
+  })
+  closeBtn.classList.remove("on");
 });
-
-// // 팝업창
-// const contents = document.querySelectorAll(".content1_inner li")
-// const popup = document.querySelector(".popup");
-// const section = document.querySelectorAll(".popup > section");
-// const closeBtn = document.querySelector(".popBtn_close");
-
-
-// contents.forEach(item => {  
-//   item.addEventListener("click", e=>{
-//     e.preventDefault();
-//     popup.classList.add("on");
-//   });
-// });
-
-// for(var i=0; i<contents.length; i++){
-//   contents[i].addEventListener("click", e=>{
-//     e.preventDefault();
-//     section.forEach(image => {
-//       image.classList.remove("on");
-//     });
-//     section[i].classList.add("on");
-//     popup.style.display = "block";
-//   });
-// }
-
-// contents.addEventListener("click", e=>{
-//   e.preventDefault();
-//   // section.forEach(image => {
-//   //   image.classList.remove("on");
-//   // });
-//   // e.currentTarget.classList.add("on");
-//   popup.style.display = "block";
-// });
-
-
-
-// closeBtn.addEventListener("click", e=>{
-//   e.preventDefault();
-//   popup.style.display = "none";
-//   section.classList.remove("on");
-// });
-
 
 
 
