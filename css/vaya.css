@@ -5,9 +5,15 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
 }
 
-@import url('https://fonts.cdnfonts.com/css/baskerville');
-/* font-family: 'Baskerville', sans-serif;
-font-family: 'Baskerville BT', sans-serif; */
+@font-face {
+    font-family: 'Baskerville Old Face';
+    src: url(../font/BaskOldFace.woff2) format('woff2'),
+        url(../font/BaskOldFace.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 
 /* Mobile 크기 0~768 */
@@ -126,14 +132,8 @@ div.mob{display: none;}
 .header_wrap > ul > li > a:hover{color: #bbb;}
 
 /* container */
-#content > h1{
-    color: #FFF;
-    font-family: 'Baskerville BT', sans-serif;
-    font-size: 90px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: -2.6px;
-}
+#content > h1{color: #FFF;  font-family: 'Baskerville Old Face'; font-size: 110px; font-weight: 400;
+letter-spacing: -2.6px;}
 
 #content > dl{display: inline-block; margin-top: 35px; font-family: 'GmarketSansMedium'; height: 30px; margin-right: 53px;}
 #content > dl > dt{float: left; color: #fff; font-size: 18px; line-height: 30px; font-weight: 700; position: relative; margin-right: 20px; letter-spacing: 0.4px;}
@@ -148,26 +148,10 @@ div.mob{display: none;}
 
 #content > p{margin-top: 30px; font-size: 18px; font-weight: 300;  color: #dddddd;  font-family: 'GmarketSansMedium';}
 
-#content > a {
-    width: 180px;
-    height: 55px;
-    line-height: 55px;
-    background: #ffffff;
-    border-radius: 50px;
-    color: #111;
-    display: block;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    text-align: center;
-    transition: transform 0.3s;
-    margin-top: 50px;
-  }
+#content > a {width: 180px;height: 55px;line-height: 55px;background: #ffffff;border-radius: 50px;color: #111;display: block;font-family: 'Montserrat', sans-serif;font-size: 15px;font-weight: 700;text-align: center;transition: transform 0.3s;margin-top: 50px;}
 
-  #content > a:hover {
-    transform: scale(1.05);
-    background: #ffd3d0;
-  }
+#content > a:hover {transform: scale(1.05);
+background: #ffd3d0;}
 
 }
 

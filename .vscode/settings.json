@@ -1,3 +1,4 @@
 {
-    "editor.fontFamily": "Pretendard Variable, Consolas, 'Courier New', monospace"
+    "editor.fontFamily": "Pretendard Variable, Consolas, 'Courier New', monospace",
+    "liveServer.settings.port": 5503
 }

@@ -35,10 +35,6 @@ a:hover{color: #666;}
     #content3{width: 100%; height: 100%; background: #b1c3df; background: url(../images/concept_bg.jpg)no-repeat 0 -5%; background-size: 100%;}
         .content3_inner{position: relative; width: 1320px; height: 100%; margin: 0 auto; padding-top: 550px; box-sizing: border-box;}
         .content3_inner::after{content: ""; display: block; clear: both;}
-    #content4{background: #e6c798;}
-    #content5{background: #bea9da;}
-    #content6{background: #daa9c4;}
-    #content7{background: #b8e7d1;}
 
 /* header */
 div.mobBtn{display: none;}
@@ -64,6 +60,10 @@ div.mob{display: none;}
 .content1_inner > dl:last-of-type > dd:nth-of-type(1){margin-left: 20px;}
 .content1_inner > dl:last-of-type > dd:nth-of-type(2){background-position-x: -40px;}
 
+.content1_inner > a {display: block; width: 180px; height: 55px; line-height: 55px; background: #F36; border-radius: 50px; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 15px;  font-weight: 700; text-align: center; transition: all 0.3s; margin-top: 30px; border-radius: 50px; box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.30);}
+.content1_inner  > a:hover {transform: scale(1.05); background: rgb(241, 4, 63); color: #fff;}
+
+
 
 /* content2 */
 .content2_inner > h2{position: absolute; left: 0; top: 0; width: 200px; color: #FFF;
@@ -82,9 +82,6 @@ letter-spacing: 0.6px; background: ;}
 .content3_inner > dl > dd{font-family: 'GmarketSansMedium'; font-size: 16px; font-weight: 200; color: #695D5D; line-height: 1.6;}
 
 .content3_inner > img{position: relative; top: 40%; transform: translateY(-50%); right: 50px; float: right; width: 30%;}
-
-
-
 
 
 }
