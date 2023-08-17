@@ -18,8 +18,6 @@ vayaBtn.addEventListener("click", e=>{
     vayaPop.classList.add("on");
     backBtn.classList.add("on");
     body.classList.add("on");
-	backBtn.style.background = "url(../images/back_icon.png)";
-
 	popup.addEventListener('wheel', parentScrollHandler);
 });
 
@@ -27,7 +25,6 @@ backBtn.addEventListener("click", e=>{
     e.preventDefault();
     popup.classList.remove("on");
     vayaPop.classList.remove("on");
-    ottPop.classList.remove("on");
     backBtn.classList.remove("on");
     body.classList.remove("on");
     scrollAni(3*deviceHeight);
