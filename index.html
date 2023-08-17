@@ -7,17 +7,34 @@
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 		<link href="css/index.css" rel="stylesheet">
 		<script defer src="js/main.js"></script>
-		<!-- <script defer src="js/popup.js"></script> -->
+		<script defer src="js/sllide.js"></script>
+		<script defer src="js/vaya.js"></script>
 	</head>
 
 	<body>	
-
 	<!-- 본문바로가기 -->
 	<div id="skipNavi">
 		<a href="#projects">본문바로가기</a>
  	 </div>
   	<!-- //본문바로가기 -->
   	<hr>
+
+	 <!-- 모바일 -->
+	<div class="bg"></div>
+
+	<div class="mobBtn">
+		<a href="#" title="메뉴 전체보기 열기">
+			<img src="images/mob_menu.png" alt="메뉴 전체보기">
+		</a>
+	</div>
+
+	<div class="mob">
+		<ul>
+			<li><a href="#">ABOUT</a></li>
+			<li><a href="#">WORK</a></li>
+			<li><a href="#">CONTACT</a></li>
+		</ul>
+	</div>
 
 	<!-- header -->
 	<header id="header">
@@ -82,9 +99,7 @@
 		<!-- content3 -->
 		<section id="about" opage>
 			<div class="about_inner">
-				<div class="profile">
-					<img src="images/pofile.png" alt="사진" />
-				</div>
+				<div class="profile">프로필 사진</div>
 				<div class="info_txt">
 					<p>가치있는, 같이 가고싶은 <span>UI 디자이너</span> 정민서 입니다.</p>
 					<ul>
@@ -154,14 +169,34 @@
 				<ul>
 					<!-- 컨텐츠1 -->
 					<li>
-						<a href="#" target="_blank" class="vaya_btn"><img src="images/thum_01.jpg" alt="vaya pivon"></a>
+						<ul class="slide_img">
+							<li>
+								<a href="#" target="_blank" class="vaya_btn">
+									<img src="images/thum_01.jpg" alt="vaya pivon">
+								</a>
+							</li>
+							<li>
+								<a href="#" target="_blank" class="vaya_btn">
+									<img src="images/vaya_mokup.png" alt="바야비본 목업">
+								</a>
+							</li>
+						</ul>
 						<span>WEB DESIGN •  UI DEVELOP</span>
 						<p>Vaya Pivon</p>
 						<a href="VayaPivon.html" target="_blank">LEARN MORE</a>
 					</li>
 					<!-- 컨텐츠2 -->
 					<li>
-						<a href="ottogi.html" target="_blank" class="ottogi_btn"><img src="images/thum_02.jpg" alt="ottogi" /></a>
+						<div class="slide_02">
+							<ul class="slide_img_02">
+								<li>
+									<a href="ottogi.html" target="_blank" class="ottogi_btn"><img src="images/thum_02.jpg" alt="ottogi" /></a>
+								</li>
+								<li>
+									<a href="ottogi.html" target="_blank" class="ottogi_btn"><img src="images/ottogi_mokup.png" alt="ottogi 목업" /></a>
+								</li>
+							</ul>
+						</div>
 						<div class="ottogi_txt">
 							<span>WEB UI DEVELOP</span>
 							<p>Ottogi<br><strong>오뚜기</strong></p>
@@ -180,7 +215,7 @@
 					</li>
 					<!-- 컨텐츠4 -->
 					<li>
-						<a href="#" target="_blank"><img src="#" alt="artview" /></a>
+						<a href="#" target="_blank"><img src="images/artview.png" alt="artview" /></a>
 						<div class="artview_txt">
 							<span>UI•UX DESIGN</span>
 							<p>ARTVIEW</p>
@@ -192,9 +227,9 @@
 						<div class="mupick_txt">
 							<span>UI•UX DESIGN</span>
 							<p>MUP!CK<br><strong>뮤픽</strong></p>
-							<a href="#" target="_blank">LEARN MORE</a>
+							<a href="mupick.html" target="_blank">LEARN MORE</a>
 						</div>
-						<a href="#" target="_blank"><img src="images/thum_05.jpg" alt="뮤픽" /></a>
+						<a href="mupick.html" target="_blank"><img src="images/thum_05.jpg" alt="뮤픽" /></a>
 					</li>
 					<!-- 컨텐츠6 -->
 					<li>

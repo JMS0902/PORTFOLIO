@@ -1,6 +1,5 @@
 //index.js
 const contents = document.querySelectorAll("#container > div");
-const content4 = document.querySelector("#content4");
 
 let deviceHeight = window.innerHeight;
 
@@ -11,7 +10,6 @@ window.addEventListener("resize", ()=>{
 for(var i=0; i<contents.length; i++){
     contents[i].style.height = `${deviceHeight}px`;
 }
-// content4.style.height="7000px";
 
 
 //스크롤 할 때 한페이지씩 움직이기
