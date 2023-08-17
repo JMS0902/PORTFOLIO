@@ -23,5 +23,5 @@ e.currentTarget.classList.toggle("on");
     btnOpen.setAttribute("title","메뉴 전체보기 열기");
     btnCloseImg.setAttribute("src","images/mob_menu.png");
   }
-
+  
 });

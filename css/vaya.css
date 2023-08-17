@@ -41,7 +41,6 @@ div.bg.on{z-index: 90; position: absolute; left: 0; top: 0; right: 0; bottom: 0;
 
 /* 햄버거버튼 */
 div.mobBtn > a{display: block; position: absolute; right: 5%; top: 32px;  z-index: 150;}
-div.mobBtn > a.on{}
 div.mobBtn > a > img{height: 20px;}
 
 /* 모바일 전체메뉴 */
