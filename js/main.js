@@ -1,38 +1,5 @@
 // main.js
 
-// 바야비본 팝업창
-const body = document.querySelector("body")
-const vayaBtn = document.querySelector(".projects_inner .vaya_btn");
-const popup = document.querySelector(".projects_popup");
-const vayaPop = document.querySelector(".vaya_popup");
-const backBtn = document.querySelector("a.back_btn");
-
-
-const parentScrollHandler = (e) => {
-    e.stopPropagation();
-};
-
-vayaBtn.addEventListener("click", e=>{
-    e.preventDefault();
-    popup.classList.add("on");
-    vayaPop.classList.add("on");
-    backBtn.classList.add("on");
-    body.classList.add("on");
-	popup.addEventListener('wheel', parentScrollHandler);
-});
-
-backBtn.addEventListener("click", e=>{
-    e.preventDefault();
-    popup.classList.remove("on");
-    vayaPop.classList.remove("on");
-    backBtn.classList.remove("on");
-    body.classList.remove("on");
-    scrollAni(3*deviceHeight);
-    lisAni(lis, 3);
-  
-    popup.removeEventListener('wheel', parentScrollHandler);
-});
-
 let winHeight = 0; // 브라우저 창 높이
 let oPage = []; // 원페이지 시작 위치 배열
 let oIdx = 0; // 현재 원페이지 인덱스
@@ -159,34 +126,10 @@ $(function(){
 const contents = document.querySelectorAll('#container > section');
 const lis = document.querySelectorAll('.side_roll > ul > li');
 const logo = document.querySelector(".header_wrap > h1 > a");
-const gnb = document.querySelectorAll(".header_wrap > ul > li");
+const gnb = document.querySelectorAll(".header_wrap  ul  li");
 const content = document.querySelectorAll("#contetts > .accordian > .tab");
 
 let deviceHeight = window.innerHeight;
-
-//스크롤 할 때 한페이지씩 움직이기
-for(let i=0; i<contents.length; i++){
-	contents[i].addEventListener("wheel", (e)=>{
-	  if(e.deltaY < 0){
-	  //scroll up
-  
-	  if(i>=3 && i<5){
-		lisAni(lis, 3);
-	  }else{
-		lisAni(lis, i-1);
-	  }
-  
-	  }else if(e.deltaY > 0){
-	  //scroll down
-	  
-		if(i>=3 && i<5){
-		  lisAni(lis, 3);
-		}else{
-		  lisAni(lis, i+1);
-		}
-	  }
-	});
- }
 
 //scrollAni 함수
 function scrollAni(topH){
@@ -205,6 +148,31 @@ item.classList.remove('on');
 className[value].classList.add('on');
 }
 
+//스크롤 할 때 한페이지씩 움직이기
+for(let i=0; i<contents.length; i++){
+	contents[i].addEventListener("wheel", (e)=>{
+	  if(e.deltaY < 0){
+	  //scroll up
+
+	  if(i>=3 && i<5){
+		lisAni(lis, 3);
+	  }else{
+		lisAni(lis, i-1);
+	  }
+  
+	  }else if(e.deltaY > 0){
+	  //scroll down
+
+		if(i>=3 && i<5){
+		  lisAni(lis, 3);
+		}else{
+		  lisAni(lis, i+1);
+		}
+	  }
+	});
+}
+
+
 // 클릭하면 해당 페이지로 스크롤
 for(let i=0; i<lis.length; i++){
   lis[i].addEventListener('click',(e)=>{
@@ -218,7 +186,9 @@ for(let i=0; i<lis.length; i++){
 		scrollAni(i*deviceHeight);
 	}
  	});
+}
 
+for(let i=0; i<gnb.length; i++){
   gnb[i].addEventListener("click", e=>{
 	e.preventDefault();
 	if(i==0){
@@ -232,7 +202,9 @@ for(let i=0; i<lis.length; i++){
 		scrollAni(4*deviceHeight);
 	}
  });
+}
 
+for(let i=0; i<content.length; i++){
  content[i].addEventListener("click", e=>{
 	e.preventDefault();
 	if(i==0){
@@ -246,11 +218,10 @@ for(let i=0; i<lis.length; i++){
 		scrollAni(4*deviceHeight);
 	}
  });
+}
 
-  logo.addEventListener("click", e=>{
+logo.addEventListener("click", e=>{
 	e.preventDefault();
 	scrollAni(0*deviceHeight);
 	lisAni(lis, 0);
-   });
-   
-}
+});

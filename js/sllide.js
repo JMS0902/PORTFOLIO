@@ -6,9 +6,8 @@ const ottEach = document.querySelectorAll(".slide_img_02 > li"); // ul > li
 
 let lastNum = 1;
 let bnnNum = 0;
-let bnnW = document.querySelector(".slide_img > li:first-child").offsetWidth;
+let bnnW = document.querySelector(".slide_img > li").offsetWidth;
 let ottW = document.querySelector(".slide_img_02 > li:first-child").offsetWidth;
-
 
 function autoSlide(){
 	bnnNum++;

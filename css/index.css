@@ -419,8 +419,8 @@ background: url(../images/profile.jpg)no-repeat 50% 0; background-size: contain;
 .user_box input:focus ~ label,
 .user_box input:valid ~ label{top: -28px; left: 0; color: #777; font-size: 12px; font-weight: 700;}
 
-.contact_box form a{display: block; width: 100%; height: 60px; background: #ffffffc4; color: #333; line-height: 60px; font-size: 17px; text-align: center; margin-top: 45px; border-radius: 10px; font-weight: 700; letter-spacing: 6px; transition: all 0.3s linear 0s;}
-.contact_box a:hover{background: #505050b7; color: #fff;}
+.contact_box form a{display: block; width: 100%; height: 60px; background: rgba(255, 255, 255, 0.8); color: #333; line-height: 60px; font-size: 17px; text-align: center; margin-top: 45px; border-radius: 10px; font-weight: 700; letter-spacing: 6px; transition: all 0.3s linear 0s;}
+.contact_box a:hover{background: rgba(0, 0, 0, 0.7); color: #fff;}
 }
 
 /* PC 크기 769~최대 */
@@ -466,6 +466,7 @@ div.mob{display: none;}
 .side_roll > ul > li.on > a{height: 30px; background: #fff;}
 .side_roll > ul > li > a:hover{background: #fff;}
 
+
 /* content1 - main */
 #main > h1{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'PartialSansKR-Regular'; font-size: 110px; letter-spacing: 7.2px; background: radial-gradient(74.40% 74.40% at 47.97% 50.00%, #FFF 0%, rgba(255, 255, 255, 0.50) 100%);
 background-clip: text;
@@ -473,18 +474,16 @@ background-clip: text;
 -webkit-text-fill-color: transparent;
 animation: appear 3s;}
 @keyframes appear {
-    from {
+    0% {
        top: 100%;
        opacity: 0;
-      }
-    
-      to {
-        top: 50%;
-        opacity: 1;
-      }
-
+    }
     75%{
         top: 49%;
+    }
+    100% {
+        top: 50%;
+        opacity: 1;
     }
 }
 
@@ -668,17 +667,18 @@ a.popBtn_close{position: absolute; top: 5%; right: 10%; width: 23px; height: 23p
 
 /* 컨텐츠 1 */
 .projects_inner > ul{display: flex; flex-flow: column nowrap; width: 100%; font-family: 'Montserrat', sans-serif;}
-.projects_inner > ul > li:nth-child(1){position: relative; border-bottom: 2px solid #EDEDED; overflow: hidden;}
+.projects_inner > ul > li:nth-child(1){position: relative; border-bottom: 2px solid #EDEDED; overflow: hidden; height: 930px;}
 
-.slide_img {width: 200%; transition: transform 0.6s linear 0s; left: 0; height: 930px; display: flex; flex-flow: row nowrap;}
-.slide_img > li {width: 100%;}
+.slide_img {width: 200%; transition: transform 0.6s linear 0s; left: 0; display: flex; flex-flow: row nowrap; overflow: hidden;}
+.slide_img > li {width: 100%; flex: 1; overflow: hidden;}
 .slide_img > li > a{display: block; width: 100%;}
 .slide_img > li:first-child > a > img{height: 600px;}
-.slide_img > li:last-child > a > img{height: 600px; padding-top: 60px;}
+.slide_img > li:last-child > a > img{height: 580px; padding-top: 50px; box-sizing: border-box;}
 
 /* 텍스트 */
-.projects_inner > ul > li:nth-child(1) > span{position: absolute; left: 0;  top: 640px; font-size: 18px; letter-spacing: 0.4px; color: #f1f1f1;}
+.projects_inner > ul > li:nth-child(1) > span:first-of-type{position: absolute; left: 0;  top: 640px; font-size: 18px; letter-spacing: 0.4px; color: #f1f1f1;}
 .projects_inner > ul > li:nth-child(1) > p{position: absolute; left: 0;  top: 665px;  font-size: 38px; font-weight: 700; text-align: left; margin-top: 5px;}
+.projects_inner > ul > li:nth-child(1) > span:last-of-type{position: absolute; left: 0; top: 725px; font-size: 14px; font-weight: 400; letter-spacing: 1.5px;}
 
 .projects_inner > ul > li:nth-child(1) > a{position: absolute; left: 0; top: 790px; width: 100%; color: #fff; font-size: 17px; text-align: left; margin-top: 85px; padding-bottom: 5px; transition: all 0.2s linear 0s;}
 .projects_inner > ul > li:nth-child(1)  > a::after{content: ""; display: block; position: absolute; left: 0; bottom: 0; width: 120px; height: 1px; background: #ffffffa4;}
@@ -716,10 +716,12 @@ a.popBtn_close{position: absolute; top: 5%; right: 10%; width: 23px; height: 23p
 .projects_inner > ul > li:nth-child(3) > a{width: 50%;}
 .projects_inner > ul > li:nth-child(3) > a > img{width: 100%;}
 
+/* 텍스트 */
 .paul_txt {position: relative; width: 40%; height: 890px; margin-left: 40px;}
-.paul_txt > span{display: inline-block; width: 100%; text-align: left; font-size: 18px;letter-spacing: 2px; font-weight: 500;}
-.paul_txt > p{width: 100%; display: inline-block; margin-top: 515px; text-align: left; line-height: 1.4; font-weight: 300; font-size: 35px;}
+.paul_txt > span:first-of-type{display: inline-block; width: 100%; text-align: left; font-size: 18px;letter-spacing: 2px; font-weight: 500;}
+.paul_txt > p{width: 100%; display: inline-block; margin-top: 490px; text-align: left; line-height: 1.4; font-weight: 300; font-size: 35px;}
 .paul_txt > p > strong{font-family: 'GmarketSansMedium'; font-weight: 500;}
+.paul_txt > span:last-of-type{display: inline-block;  width: 100%; text-align: left; font-size: 14px; font-weight: 400; letter-spacing: 1.5px; margin-top: 5px;}
 .paul_txt > a{position: relative; display: inline-block; width: 100%; color: #fff; font-size: 17px; text-align: left; margin-top: 110px; padding-bottom: 5px; transition: all 0.2s linear 0s;}
 .paul_txt > a::after{content: ""; display: block; position: absolute; left: 0; bottom: 0; width: 120; height: 1px; background: #ffffffa4;}
 .paul_txt > a:hover{color: #ccc;}
@@ -735,9 +737,10 @@ a.popBtn_close{position: absolute; top: 5%; right: 10%; width: 23px; height: 23p
 .projects_inner > ul > li:nth-child(4) > a > img{width: 100%; background: url(../images/artview_bg.jpg)no-repeat 50% 50%; background-size: cover;}
 
 .artview_txt {position: relative; width: 45%; height: 500px;}
-.artview_txt > span{display: inline-block; width: 100%; text-align: left; font-size: 18px;letter-spacing: 2px; font-weight: 500;}
-.artview_txt > p{width: 100%; display: inline-block; margin-top: 290px; text-align: left; line-height: 1.4; font-weight: 600; font-size: 35px;}
+.artview_txt > span:first-of-type{display: inline-block; width: 100%; text-align: left; font-size: 18px;letter-spacing: 2px; font-weight: 500;}
+.artview_txt > p{width: 100%; display: inline-block; margin-top: 255px; text-align: left; line-height: 1.4; font-weight: 600; font-size: 35px;}
 .artview_txt > p > strong{font-family: 'GmarketSansMedium'; font-weight: 500;}
+.artview_txt > span:last-of-type{display: inline-block;  width: 100%; text-align: left; font-size: 14px; font-weight: 400; letter-spacing: 1.5px; margin-top: 5px;}
 .artview_txt > a{position: relative; display: inline-block; width: 100%; color: #fff; font-size: 17px; text-align: left; margin-top: 90px; padding-bottom: 5px; transition: all 0.2s linear 0s;}
 .artview_txt > a::after{content: ""; display: block; position: absolute; left: 0; bottom: 0; width: 120; height: 1px; background: #ffffffa4;}
 .artview_txt > a:hover{color: #ccc;}
@@ -750,13 +753,14 @@ a.popBtn_close{position: absolute; top: 5%; right: 10%; width: 23px; height: 23p
 /* 컨텐츠 5 */
 .projects_inner > ul > li:nth-child(5){position: relative; display: flex; padding: 60px 40px 120px 0; justify-content: space-between; border-bottom: 2px solid #fff;}
 .projects_inner > ul > li:nth-child(5)::after{content: ""; display: block; position: absolute; right: 790px; top: 0; width: 2px; height: 100%; background: #fff;}
-.projects_inner > ul > li:nth-child(5) > a{width: 50%;}
+.projects_inner > ul > li:nth-child(5) > a{width: 58%;}
 .projects_inner > ul > li:nth-child(5) > a > img{width: 100%;}
 
 .mupick_txt {position: relative; width: 45%; height: 498px; margin-left: 40px;}
-.mupick_txt  > span{display: inline-block; width: 100%; text-align: left; font-size: 18px;letter-spacing: 2px; font-weight: 500;}
-.mupick_txt  > p{width: 100%; display: inline-block; margin-top: 200px; text-align: left; line-height: 1.4; font-weight: 300; font-size: 35px;}
+.mupick_txt  > span:first-of-type{display: inline-block; width: 100%; text-align: left; font-size: 18px;letter-spacing: 2px; font-weight: 500;}
+.mupick_txt  > p{width: 100%; display: inline-block; margin-top: 210px; text-align: left; line-height: 1.4; font-weight: 300; font-size: 35px;}
 .mupick_txt  > p > strong{font-family: 'GmarketSansMedium'; font-weight: 500;}
+.mupick_txt  > span:last-of-type{display: inline-block;  width: 100%; text-align: left; font-size: 14px; font-weight: 400; letter-spacing: 1.5px; margin-top: 5px;}
 .mupick_txt  > a{position: relative; display: inline-block; width: 100%; color: #fff; font-size: 17px; text-align: left; margin-top: 90px; padding-bottom: 5px; transition: all 0.2s linear 0s;}
 .mupick_txt  > a::after{content: ""; display: block; position: absolute; left: 0; bottom: 0; width: 120; height: 1px; background: #ffffffa4;}
 .mupick_txt  > a:hover{color: #ccc;}
@@ -772,8 +776,9 @@ a.popBtn_close{position: absolute; top: 5%; right: 10%; width: 23px; height: 23p
 .projects_inner > ul > li:nth-child(6) > a > img{width: 100%;}
 
 .visual_txt {position: relative; width: 40%; height: 785px;}
-.visual_txt > span{display: inline-block; width: 100%; text-align: left; font-size: 18px;letter-spacing: 2px; font-weight: 500;}
-.visual_txt > p{width: 100%; display: inline-block; margin-top: 415px; text-align: left; line-height: 1.3; font-weight: 600; font-size: 35px;}
+.visual_txt > span:first-of-type{display: inline-block; width: 100%; text-align: left; font-size: 18px;letter-spacing: 2px; font-weight: 500;}
+.visual_txt > p{width: 100%; display: inline-block; margin-top: 390px; text-align: left; line-height: 1.3; font-weight: 600; font-size: 35px;}
+.visual_txt > span:last-of-type{display: inline-block;  width: 100%; text-align: left; font-size: 14px; font-weight: 400; letter-spacing: 1.5px; margin-top: 8px;}
 .visual_txt > a{position: relative; display: inline-block; width: 100%; color: #fff; font-size: 17px; text-align: left; margin-top: 120px; padding-bottom: 5px; transition: all 0.2s linear 0s;}
 .visual_txt > a::after{content: ""; display: block; position: absolute; left: 0; bottom: 0; width: 120; height: 1px; background: #ffffffa4;}
 .visual_txt > a:hover{color: #ccc;}
